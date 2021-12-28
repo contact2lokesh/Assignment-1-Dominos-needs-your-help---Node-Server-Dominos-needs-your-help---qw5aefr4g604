@@ -27,14 +27,18 @@ function handleServer(req, res) {
          res.write(jsonContent);
          res.end();
      }
-
+      else if(req.url !== '/contact'){
+        res.writeHead(404, {'content-type': 'application/json'});
+        res.write("Invalid");
+        res.end();
+      }
 
     
      else {
         res.writeHead(404, {"content-type": "text/html"});
         res.write("Invalid Request");
         res.end();
-    }
+    } 
 }
 
 httpServer.listen(8081);
