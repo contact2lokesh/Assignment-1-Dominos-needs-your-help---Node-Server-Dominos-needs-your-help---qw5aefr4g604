@@ -35,7 +35,7 @@ function handleServer(req, res) {
 
     
      else {
-        res.writeHead(404, {"content-type": "text/html"});
+        res.writeHead(404, {"content-type": "application/json"});
         res.write(`${{}}`);
         res.end();
     } 
