@@ -35,8 +35,8 @@ function handleServer(req, res) {
 
     
      else {
-        res.writeHead(404, {"content-type": "text/plain"});
-        res.write("Invalid Request");
+        res.writeHead(404, {"content-type": "text/html"});
+        res.write(`${{}}`);
         res.end();
     } 
 }
