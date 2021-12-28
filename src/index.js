@@ -8,7 +8,6 @@ const objData =   {
                    }
                    const jsonContent = JSON.stringify(objData);
                 //    const objContent = JSON.parse(jsonContent)
-const emptyObj = {}
 
 function handleServer(req, res) {
   if(req.url == '/'){
@@ -35,8 +34,8 @@ function handleServer(req, res) {
 
     
      else {
-        res.writeHead(404, {"content-type": "application/json"});
-        res.write(emptyObj);
+        res.writeHead(404, {"content-type": "text/html"});
+        res.write("<h1>Invalid Request</h1>");
         res.end();
     } 
 }
