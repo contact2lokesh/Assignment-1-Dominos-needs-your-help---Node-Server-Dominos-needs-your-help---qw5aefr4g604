@@ -7,8 +7,8 @@ const objData =   {
                       email: 'guestcaredominos@jublfood.com'
                    }
                    const jsonContent = JSON.stringify(objData);
-                //    const objContent = JSON.parse(jsonContent);
-
+                //    const objContent = JSON.parse(jsonContent)
+const emptyObj = {}
 
 function handleServer(req, res) {
   if(req.url == '/'){
@@ -36,7 +36,7 @@ function handleServer(req, res) {
     
      else {
         res.writeHead(404, {"content-type": "application/json"});
-        res.write(`${{}}`);
+        res.write(emptyObj);
         res.end();
     } 
 }
