@@ -30,9 +30,9 @@ function handleServer(req, res) {
 
 
     
-    else {
+     else {
         res.writeHead(404, {"content-type": "text/html"});
-        res.write("<h1>Invalid Request</h1>");
+        res.write("Invalid Request");
         res.end();
     }
 }
