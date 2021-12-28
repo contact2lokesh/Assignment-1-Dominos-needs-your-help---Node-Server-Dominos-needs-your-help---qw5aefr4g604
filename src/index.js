@@ -18,11 +18,11 @@ function handleServer(req, res) {
 
 
     
-    else {
-        res.writeHead(404, {"content-type": "text/html"});
-        res.write("<h1>Invalid Request</h1>");
-        res.end();
-    }
+    // else {
+    //     res.writeHead(404, {"content-type": "text/html"});
+    //     res.write("<h1>Invalid Request</h1>");
+    //     res.end();
+    // }
 }
 
 httpServer.listen(8081);
