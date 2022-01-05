@@ -10,12 +10,6 @@ const objData =   {
                 //    const objContent = JSON.parse(jsonContent)
 
 function handleServer(req, res) {
-//   if(req.url == '/'){
-//       res.writeHead(200, {'content-type': 'text/plain'});
-//       //set response content
-//       res.write('This is Home Page');
-//       res.end();
-//   } 
      if(req.url == '/welcome'){
      res.writeHead(200, { 'content-type': 'text/plain'});
      res.write('Welcome to Dominos!');
