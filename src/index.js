@@ -27,6 +27,7 @@ function handleServer(req, res) {
          res.end();
      } else if(req.url !== 'welcome' &&  req.utl !== '/contact'){
            res.statusCode =  404;
+           res.end();
      }
     } 
 
