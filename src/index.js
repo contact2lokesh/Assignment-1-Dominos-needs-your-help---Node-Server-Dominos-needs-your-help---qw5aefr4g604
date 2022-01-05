@@ -25,7 +25,7 @@ function handleServer(req, res) {
          res.writeHead(200, {'content-type': 'application/json'});
          res.write(jsonContent);
          res.end();
-     } else if(req.url !== 'welcome' &&  req.utl !== '/contact'){
+     } else{
            res.statusCode =  404;
            res.end();
      }
