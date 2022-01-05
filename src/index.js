@@ -10,13 +10,13 @@ const objData =   {
                 //    const objContent = JSON.parse(jsonContent)
 
 function handleServer(req, res) {
-  if(req.url == '/'){
-      res.writeHead(200, {'content-type': 'text/plain'});
-      //set response content
-      res.write('This is Home Page');
-      res.end();
-  } 
-    else if(req.url == '/welcome'){
+//   if(req.url == '/'){
+//       res.writeHead(200, {'content-type': 'text/plain'});
+//       //set response content
+//       res.write('This is Home Page');
+//       res.end();
+//   } 
+     if(req.url == '/welcome'){
      res.writeHead(200, { 'content-type': 'text/plain'});
      res.write('Welcome to Dominos!');
      res.end();
@@ -25,12 +25,11 @@ function handleServer(req, res) {
          res.writeHead(200, {'content-type': 'application/json'});
          res.write(jsonContent);
          res.end();
-     } else {
-        res.writeHead(404);
-        // res.write("<h1>Invalid Request</h1>");
-        res.end();
+     } else if(req.url !== 'welcome' &&  req.utl !== '/contact'){
+           res.statusCode =  404;
+     }
     } 
-}
+
 
 httpServer.listen(8081);
 console.log('Node.js web server at port 8081 is running..')
