@@ -26,7 +26,7 @@ function handleServer(req, res) {
          res.write(jsonContent);
          res.end();
      } else {
-        res.writeHead(404, {"content-type": "text/html"});
+        res.writeHead(404);
         // res.write("<h1>Invalid Request</h1>");
         res.end();
     } 
